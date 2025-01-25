@@ -24,13 +24,12 @@ Se trata de un proyecto que se realizó en equipos de 4~5 personas, en el que, d
     - **`Firestore`**: Investigación e implementación como proyecto final.
 + **`Spring Boot`**<br> como framework principal del proyecto.
 + **`Programación Reactiva`**<br> para manejo asíncrono de datos en tiempo real utilizando Mono y Flux _(implementado en el proyecto final para potenciar la propiedad realtime de Firebase)._
-+ **`GitHub`**<br> para el control de versiones y trabajo en equipo.
-+ **`Gitflow`**<br> para trabajar en distintas `features` en el equipo, y así no generar conflictos en el código.
 
 ### Otras herramientas usadas
 + **IntelliJ IDEA**<br> como IDE principal para el proyecto.
 + **MySQL Workbench 8.0 CE**, **Neo4j Desktop** y **MongoDBCompass**<br> para administrar y visualizar el comportamiento del código a la hora de persistir datos.
 + **Postman**<br> para testear los endpoints REST.
++ **GitHub**<br> para el control de versiones y trabajo en equipo _(siguiendo la metodología **`Gitflow`**)_.
 + **MockMVC**<br> Pruebas unitarias e integración para APIs.
 
 # Contenidos abordados
