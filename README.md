@@ -1,26 +1,80 @@
-¿Qué podría salir de un grupo de seis estudiantes universitarios de informática? En principio, nada demasiado raro, a excepción de que los seis decidan incursionar en el mundo de las conexiones espirituales entre clases.
+# Descripción
+Este repositorio contiene el material práctico desarrollado durante la cursada de la materia [***Estrategias de Persistencia***](https://github.com/EPERS-UNQ) en la Universidad Nacional de Quilmes.
 
-Lo que en principio fue un viernes más en la universidad derivó, de alguna manera, en un pseudo-ritual en el cual los seis integrantes conectaron momentáneamente con seres de otros mundos, algunos de aspecto etéreo, otros antropomórficos pero con claras características ajenas a los humanos.
+Se trata de un proyecto que se realizó en equipos de 4~5 personas, en el que, dado cada enunciado, se tuvo que implementar distintas estrategias de persistencia, cada una con una diferente base de datos.
 
-Tras el corto estado eufórico de esa experiencia, los seis programadores volvieron en sí, sentados en el living de la casa, atónitos ante lo visto.
+# Enunciados del proyecto
 
-Miradas desconcertadas volaron entre ellos durante unos minutos, pero todos comprendieron que ahora tenían una misión: representar a estos espectros en un modelo computable.
++ [Entrega 1 - JDBC](https://github.com/mjgalarza1/epersgeist---Estrategias-de-Persistencia/blob/main/enunciado/entrega1/entrega1.md)
++ [Entrega 2 - ORM - Hibernate](https://github.com/mjgalarza1/epersgeist---Estrategias-de-Persistencia/blob/main/enunciado/entrega2/entrega2.md)
++ [Entrega 3 - ORM - Spring](https://github.com/mjgalarza1/epersgeist---Estrategias-de-Persistencia/blob/main/enunciado/entrega3/entrega3.md)
++ [Entrega 4 - NoSQL - Neo4j - Spring](https://github.com/mjgalarza1/epersgeist---Estrategias-de-Persistencia/blob/main/enunciado/entrega4/enunciado_tp4.md)
++ [Entrega 5 - NoSQL - MongoDB - Spring](https://github.com/mjgalarza1/epersgeist---Estrategias-de-Persistencia/blob/main/enunciado/entrega5/enunciado_tp5.md)
++ [Entrega 6 - NoSQL - Firebase - Spring](https://github.com/mjgalarza1/epersgeist---Estrategias-de-Persistencia/blob/main/enunciado/entregaFinal/enunciadoFinal.md)
 
-<p align="center">
-  <img src="enunciado/epersgeist.png"/>
-</p>
+# Tecnologías usadas
++ **`Java 21`**<br> como lenguaje de programación.
++ **`Bases de Datos`**
+  - Relacional
+    - **`MySQL`**.
+  - NoSQL
+    - **`Neo4J`**: Uso práctico de bases de grafos para recorrer nodos.
+    - **`MongoDB`**: Para consultas geo-espaciales.
+  - Extra
+    - **`Firestore`**: Investigación e implementación como proyecto final.
++ **`Spring Boot`**<br> como framework principal del proyecto.
++ **`Programación Reactiva`**<br> para manejo asíncrono de datos en tiempo real utilizando Mono y Flux _(implementado en el proyecto final para potenciar la propiedad realtime de Firebase)._
++ **`GitHub`**<br> para el control de versiones y trabajo en equipo.
++ **`Gitflow`**<br> para trabajar en distintas `features` en el equipo, y así no generar conflictos en el código.
 
-## Entregas
-- [Entrega 1 - JDBC](enunciado/entrega1/entrega1.md)
-- [Entrega 2 - ORM - Hibernate](enunciado/entrega2/entrega2.md)
-- [Entrega 3 - ORM - Spring](enunciado/entrega3/entrega3.md)
-- [Entrega 4 - NoSQL - Neo4j - Spring](enunciado/entrega4/enunciado_tp4.md)
-- [Entrega 5 - NoSQL - MongoDB - Spring](enunciado/entrega5/enunciado_tp5.md)
+### Otras herramientas usadas
++ **IntelliJ IDEA**<br> como IDE principal para el proyecto.
++ **MySQL Workbench 8.0 CE**, **Neo4j Desktop** y **MongoDBCompass**<br> para administrar y visualizar el comportamiento del código a la hora de persistir datos.
++ **Postman**<br> para testear los endpoints REST.
++ **MockMVC**<br> Pruebas unitarias e integración para APIs.
 
-## Consideraciones
-- Se entregará utilizando git. El grupo deberá subir el código del TP a github, hacer un tag y notificarnos de dicho tag para que podamos corregirlo. [Acá](https://sites.google.com/site/estrategiasdepersistencia/material/entregando-con-git) tienen un breve tutorial sobre como hacerlo.
-- Se considerará a un TP como entregado solo cuando tenga implementada toda la funcionalidad que se pide para la entrega.
-- Se evaluará no solo que el TP cumpla con todos los requisitos, sino la calidad del mismo (buen diseño, simplicidad, buena distribución de responsabilidades, prolijidad del código, código no repetido, formalidad en la entrega, etc)
-- Tambien se evaluará la debida implementacion de GitFlow.
-- Se espera que trabajen en el TP durante las dos primeras horas de clase todos los viernes, pero eso no resta que para llegar a cumplir con los tiempos de entrega tengan que trabajar en casa. ¡Planeen conforme a ello! Un TP no entregado a tiempo es un TP reentregado. **Solo cuentan con 3 reentregas durante la cursada.**
-- Si algo no les funciona o algo no entienden, avisen antes! En el día de la entrega o el anterior ya es demasiado tarde.
+# Contenidos abordados
+Durante la cursada, se exploraron y enseñaron los siguientes contenidos:
+
+### Persistencia y bases de datos
++ **ORM y Hibernate**: Introducción, ciclo de vida de los objetos y manejo de transacciones.
++ **Teorema CAP**: Consistencia, disponibilidad y tolerancia a particiones.
++ **Propiedades ACID**: Atomicidad, consistencia, aislamiento y durabilidad.
++ **Optimización de performance**: Uso de índices y consultas eficientes para evitar datos innecesarios.
++ **Permisos en bases de datos**: Tipos como Read-Only, Read-Write y No-Access.
+
+### Frameworks y arquitectura
++ **Spring Framework**: Configuración del entorno, inyección de dependencias y manejo de transacciones.
++ **Clean Architecture**:
+  - **Controller**: APIs REST y DTOs.
+  - **Modelo**: Lógica de negocio.
+  - **Service**: Intermediario entre la lógica de negocio y la persistencia.
+  - **Persistencia**: DAOs para interactuar con bases de datos.
+
+### Problemáticas abordadas
++ **Concurrencia**: Lockeo optimista y pesimista, estrategias para acceso concurrente y caché L2 en Hibernate.
++ **Impedancia objeto-relacional**: Soluciones para transformar estructuras de objetos en bases de datos.
++ **Estrategias de actualización**: Reachability y cascada.
+
+### Testing
++ **Unitarias**: Pruebas de componentes individuales.
++ **Integración**: Verificación de interacción entre módulos.
++ **End-to-End**: Validación completa del flujo de la aplicación.
+
+# ¿Cómo instalar el proyecto?
+1. Clonar el repositorio
+```
+git clone https://github.com/mjgalarza1/epersgeist---Estrategias-de-Persistencia.git
+```
+2. Configurar las bases de datos necesarias:
+    - **MySQL**: Crear la base de datos y actualizar `application.properties` con las credenciales.
+    - **MongoDB**: Asegurarse de que el servidor esté corriendo.
+    - **Neo4J**: Proveer la URL y las credenciales.
+    - **Firebase**: Descarga la key de Firebase y guardala en el directorio `resources` con el nombre `epers-key.json`.
+3. Ejecutar `EpersgeistApplication` que se encuentra dentro de `src/main/java/ar.edu.unq.epersgeist`.
+4. La API se levantará de manera local en `http://localhost:8080`
+
+# ⚠ Importante
++ **`¿Por qué no hay commits?`** <br> El repositorio original **es privado**, y no tengo el control para hacerlo público _(ni haciendo un fork podía hacerlo público)_, por lo no me quedó otra alternativa que crear uno nuevo.
++ Este repositorio está bajo licencia de uso académico, destinado a fines educativos y como muestra de los contenidos vistos en la materia.
+
